@@ -13,16 +13,18 @@ let job = {
 };
 
 function calculateAdultYears(userAge) {
-  return userAge - 18;
+  let result;
+  result = userAge - 18;
+  return result;
 }
 
-calculateAdultYears(age);
-alert(adultYears);
+totalAdultYears = calculateAdultYears(age);
+console.log(totalAdultYears);
 
 age = 45;
-calculateAdultYears(age);
+totalAdultYears = calculateAdultYears(age);
 
-alert(adultYears);
+console.log(totalAdultYears);
 
 // This is how a comment is added to JavaScript
 // Comments are not executed - they are just there to provide extra
@@ -43,11 +45,11 @@ let goalsForCourse = [
   "advance my shading",
 ];
 
-// 2) Output ("alert") the three variable values
+// 2) Output ("console.log") the three variable values
 
-alert(courseOfChoice);
-alert(coursePrice);
-alert(goalsForCourse);
+console.log(courseOfChoice);
+console.log(coursePrice);
+console.log(goalsForCourse);
 
 // 3) Try "grouping" the three variables together and still output their values thereafter
 
@@ -61,12 +63,13 @@ let onlineCourse = {
   ],
 };
 
-alert(onlineCourse.name);
-alert(onlineCourse.price);
-alert(onlineCourse.goals);
+console.log(onlineCourse.name);
+console.log(onlineCourse.price);
+console.log(onlineCourse.goals);
+
 // 4) Also output the second element in your "main goals" variable
 
-alert(onlineCourse.goals[1]);
+console.log(onlineCourse.goals[1]);
 
 // 5) Add a custom command that does the following:
 //    - Use your "main goals" variable and access an element by its identifier
@@ -81,7 +84,17 @@ function getListItem(array, arrayIndex) {
   return arrayElement;
 }
 
-// 6) Execute your custom command from (5) and output ("alert") the result
+// 6) Execute your custom command from (5) and output ("console.log") the result
 
 let firstGoal = getListItem(onlineCourse.goals, 0);
-alert(firstGoal);
+console.log(firstGoal);
+
+let person = {
+  name: "Judy", //property
+  greet() {
+    //method
+    console.log("Hello!");
+  },
+};
+
+person.greet();
